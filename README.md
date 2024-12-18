@@ -14,7 +14,7 @@ aws s3 cp spark-extension-limit-1.0.jar $S3_PATH/spark-extension-limit-1.0.jar
 
 
 spark-sql \
---jars $S3_PATH/spark-extension-limit-1.0-SNAPSHOT.jar \
+--jars $S3_PATH/spark-extension-limit-1.0.jar \
 --conf spark.sql.extensions=com.aws.analytics.extension.ForceLimitExtension \
 --conf spark.sql.force.limit.rows=1 
 
