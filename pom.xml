@@ -21,7 +21,7 @@
         <target.java.version>11</target.java.version>
         <spark.version>3.5.1</spark.version>
         <jackson.version>2.17.2</jackson.version>
-        <scope.type>build</scope.type>
+        <scope.type>provided</scope.type>
     </properties>
 
 
@@ -44,31 +44,6 @@
             <artifactId>spark-catalyst_2.12</artifactId>
             <version>${spark.version}</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-mllib_2.12</artifactId>
-            <version>${spark.version}</version>
-            <scope>${scope.type}</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming_2.12</artifactId>
-            <version>${spark.version}</version>
-            <scope>${scope.type}</scope>
-        </dependency>
-
-
-        <!-- Jackson Dependencies -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-scala_2.12</artifactId>
-            <version>${jackson.version}</version>
         </dependency>
 
 

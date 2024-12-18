@@ -8,9 +8,10 @@
 ```shell
 # 编译号的jar包放到s3
 S3_PATH=s3://pcd-01/tmp
-# 编译号的jar
+# 编译好的jar， 如果自己编译: mvn clean package -Dscope.type=provided
 wget https://dxs9dnjebzm6y.cloudfront.net/tmp/spark-extension-limit-1.0.jar
 aws s3 cp spark-extension-limit-1.0.jar $S3_PATH/spark-extension-limit-1.0.jar
+
 
 spark-sql \
 --jars $S3_PATH/spark-extension-limit-1.0-SNAPSHOT.jar \
